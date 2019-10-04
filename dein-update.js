@@ -2,7 +2,8 @@ var section = '';
 var albums = [];
 var singles = [];
 
-$('.rhonda-full-entry').text().split('\n')
+document.getElementsByClassName("rhonda-full-entry")[0]
+.textContent.split('\n')
 .forEach(function(line, i, lines) {
     if (/^[A-Z0-9 ]+$/.test(line)) {
         section = line;

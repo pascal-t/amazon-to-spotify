@@ -1,4 +1,34 @@
+<header>
+    <title>DeinUPDATE zu Spotify</title>
+    <style>
+        .bookmarklet {
+            display: block;
+            max-width: 400px;
+            height: 75px;
+            padding: 20px;
+            margin: 0 auto 0.8em auto;
+            background: #1e85b4;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+            color: white !important;
+            //font-family: 'Roboto','Helvetica','Arial',sans-serif;
+            font-size: 40px;
+            //font-weight: bold;
+            font-family: 'Impact',sans-serif;
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+            line-height: 1.42857143;
+        }
+        
+        p {
+            font-family: 'Verdana', sans-serif;
+            font-size: 16;
+            text-align: center;
+        }
+    </style>
+</header>
 <body>
-  <p>Drag and drop this link into your bookmarks toolbar:</p>
-  <a class="bookmarklet" href="javascript:(function()%7Bfunction%20callback()%7B(function(%24)%7Bvar%20jQuery%3D%24%3Blist%20%3D%20''%3B%24('.playlistDetailsListItem').each(function(i)%7Bif(%24(this).find('.checkboxInput').is('%3Achecked'))%20%7Breturn%20false%3B%7Dartist%20%3D%20%24(this).find('.title%20%3E%20.artist%20%3E%20a').first().attr('title').replace(%2F%20%3F(%5B%5C(%5C%5B%5D%5B%5E%5C)%5C%5D%5D%2B%5B%5C)%5C%5D%5D)%2Fg%2C%20'').replace(%2F%20feat%5C.%2Fg%2C%20'%2C').replace(%2F%20%26%2Fg%2C%20'%2C%20')%3Btrack%20%3D%20%24(this).find('.title').first().attr('title').replace(%2F%20%3F(%5B%5C(%5C%5B%5D%5B%5E%5C)%5C%5D%5D%2B%5B%5C)%5C%5D%5D)%2Fg%2C%20'')%3Blist%20%2B%3D%20%22%3Ca%20href%3D'https%3A%2F%2Fopen.spotify.com%2Fsearch%2Fsongs%2Fartist%3A%22%2Bartist%2B%22%20track%3A%22%2Btrack%2B%22'%20target%3D'_blank'%3E%22%2Bartist%2B%22%20-%20%22%2Btrack%2B%22%3C%2Fa%3E%3Cbr%3E%22%3B%7D)%3Bw%3Dwindow.open()%3Bw.document.body.innerHTML%20%3D%20list%7D)(jQuery.noConflict(true))%7Dvar%20s%3Ddocument.createElement(%22script%22)%3Bs.src%3D%22https%3A%2F%2Fajax.googleapis.com%2Fajax%2Flibs%2Fjquery%2F1.11.1%2Fjquery.min.js%22%3Bif(s.addEventListener)%7Bs.addEventListener(%22load%22%2Ccallback%2Cfalse)%7Delse%20if(s.readyState)%7Bs.onreadystatechange%3Dcallback%7Ddocument.body.appendChild(s)%3B%7D)()">amazon-to-spotify</a>
+    <p>Diesen Link in die Lesezeichen Symbolleiste ziehen.</p>
+    <a class="bookmarklet" href="javascript:(function()%7Bjavascript%3A%20(function%20()%20%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpascal-t%2Famazon-to-spotify%2Fdein-update.js')%3Bdocument.body.appendChild(jsCode)%3B%7D())%7D)()" >DeinUPDATE zu Spotify</a>
 </body>
