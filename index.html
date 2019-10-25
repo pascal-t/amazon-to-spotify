@@ -30,15 +30,9 @@
 </header>
 <body>
     <p>Diesen Link in die Lesezeichen Symbolleiste ziehen.</p>
-    <a id="bookmarklet" href="#" style="display: none">DeinUPDATE zu Spotify</a>
-    <script>
-        fetch("https://api.github.com/repos/pascal-t/amazon-to-spotify/commits")
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data) {
-            document.getElementById("bookmarklet").href = "javascript:(function()%7Bjavascript%3A%20(function%20()%20%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpascal-t%2Famazon-to-spotify@" + data[0].sha.substring(0,7) + "%2Fdein-update.js')%3Bdocument.body.appendChild(jsCode)%3B%7D())%7D)()"
-            document.getElementById("bookmarklet").style.display = "block";
-        })
-    </script>
+    <a
+       id="bookmarklet" 
+       href="javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A%20(function%20()%20%7Bfetch(%22https%3A%2F%2Fapi.github.com%2Frepos%2Fpascal-t%2Famazon-to-spotify%2Fcommits%22).then(function(response)%20%7Breturn%20response.json()%3B%7D).then(function(data)%20%7Bvar%20jsCode%20%3D%20document.createElement('script')%3BjsCode.setAttribute('src'%2C%20'https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpascal-t%2Famazon-to-spotify%40'%2Bdata%5B0%5D.sha.substring(0%2C7)%2B'%2Fdein-update.js')%3Bdocument.body.appendChild(jsCode)%3B%7D)%3B%7D())%7D)()%7D)()">
+        DeinUPDATE zu Spotify
+    </a>
 </body>
