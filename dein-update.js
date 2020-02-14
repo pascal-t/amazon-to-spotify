@@ -20,7 +20,7 @@ document.getElementsByClassName("rhonda-full-entry")[0]
                 var url = 'https://open.spotify.com/search/artist:' + artists + ' album:' + work;
                 albums.push({"artists": artists, "album": work, "url": url});
                 break;
-            case "SINGLES":
+            case "SINGLE":
                 var url = 'https://open.spotify.com/search/artist:' + artists + ' track:' + work;
                 singles.push({"artists": artists, "track": work, "url": url});
                 break;
